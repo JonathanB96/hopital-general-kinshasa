@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Rendez-vous | Hôpital Général de Kinshasa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap LOCAL -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS personnel -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      Hôpital Général de Kinshasa
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="apropos.html">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="medecins.html">Médecins</a></li>
+        <li class="nav-item"><a class="nav-link" href="patients.html">Patients</a></li>
+        <li class="nav-item"><a class="nav-link active" href="appointments.html">Rendez-vous</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= PAGE HEADER ================= -->
+<header class="bg-light py-4">
+  <div class="container text-center">
+    <h1 class="text-primary fw-bold">Prendre un rendez-vous</h1>
+    <p class="lead">
+      Remplissez le formulaire ci-dessous pour planifier une consultation à l’Hôpital Général de Kinshasa
+    </p>
+  </div>
+</header>
+
+<!-- ================= FORM SECTION ================= -->
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title text-center mb-4">Formulaire de rendez-vous</h4>
+
+            <form>
+
+              <!-- Patient -->
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label class="form-label">Nom complet</label>
+                  <input type="text" class="form-control" placeholder="Ex: Nzambe Marie">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Téléphone</label>
+                  <input type="tel" class="form-control" placeholder="+243 ...">
+                </div>
+              </div>
+
+              <!-- Email & Service -->
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label class="form-label">Email (optionnel)</label>
+                  <input type="email" class="form-control" placeholder="exemple@gmail.com">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Service</label>
+                  <select class="form-select">
+                    <option selected>Choisir un service</option>
+                    <option>Médecine Générale</option>
+                    <option>Pédiatrie</option>
+                    <option>Maternité / Gynécologie</option>
+                    <option>Chirurgie</option>
+                    <option>Cardiologie</option>
+                    <option>Urgences</option>
+                    <option>Laboratoire</option>
+                    <option>Imagerie Médicale</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Doctor -->
+              <div class="mb-3">
+                <label class="form-label">Médecin (optionnel)</label>
+                <select class="form-select">
+                  <option selected>Choisir un médecin (si souhaité)</option>
+                  <option>Dr. Jean Kabila (Médecine Générale)</option>
+                  <option>Dr. Marie Nzambe (Pédiatrie)</option>
+                  <option>Dr. Patrick Banza (Chirurgie)</option>
+                  <option>Dr. Aline Mbuyi (Gynécologie)</option>
+                  <option>Dr. Didier Lukusa (Cardiologie)</option>
+                </select>
+              </div>
+
+              <!-- Date & Time -->
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label class="form-label">Date souhaitée</label>
+                  <input type="date" class="form-control">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Heure souhaitée</label>
+                  <input type="time" class="form-control">
+                </div>
+              </div>
+
+              <!-- Motif -->
+              <div class="mb-4">
+                <label class="form-label">Motif du rendez-vous</label>
+                <textarea class="form-control" rows="4" placeholder="Décrivez brièvement votre besoin (symptômes, contrôle, consultation...)"></textarea>
+              </div>
+
+              <!-- Notice -->
+              <div class="alert alert-info">
+                <strong>Note :</strong> Ce formulaire est un prototype académique.
+                Les informations ne sont pas stockées dans une base de données dans cette version.
+              </div>
+
+              <!-- Button -->
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  Valider le rendez-vous
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+        <!-- Extra info -->
+        <div class="text-center mt-4">
+          <p class="mb-1"><strong>Horaires :</strong> Lundi - Samedi : 08h00 - 17h00</p>
+          <p class="mb-0"><strong>Urgences :</strong> Disponibles 24h/24</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-primary text-white text-center py-3">
+  <p class="mb-0">
+    © 2025 Hôpital Général de Kinshasa — Projet académique Web I
+  </p>
+</footer>
+
+<!-- Bootstrap JS LOCAL -->
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

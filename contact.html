@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Hôpital Général de Kinshasa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap LOCAL -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS personnel -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      Hôpital Général de Kinshasa
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="medecins.html">Médecins</a></li>
+        <li class="nav-item"><a class="nav-link" href="patients.html">Patients</a></li>
+        <li class="nav-item"><a class="nav-link" href="rendezvous.html">Rendez-vous</a></li>
+        <li class="nav-item"><a class="nav-link" href="horaires.html">Horaires</a></li>
+        <li class="nav-item"><a class="nav-link text-warning fw-bold" href="urgences.html">Urgences</a></li>
+        <li class="nav-item"><a class="nav-link" href="actualites.html">Actualités</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= PAGE HEADER ================= -->
+<header class="bg-light py-4">
+  <div class="container text-center">
+    <h1 class="text-primary fw-bold">Contact</h1>
+    <p class="lead">
+      Contactez l’Hôpital Général de Kinshasa pour toute information
+    </p>
+  </div>
+</header>
+
+<!-- ================= CONTACT SECTION ================= -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Contact Form -->
+      <div class="col-md-7">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title mb-4">Envoyer un message</h4>
+
+            <form>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label class="form-label">Nom</label>
+                  <input type="text" class="form-control" placeholder="Votre nom">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Téléphone</label>
+                  <input type="tel" class="form-control" placeholder="+243 ...">
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" placeholder="exemple@gmail.com">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Sujet</label>
+                <input type="text" class="form-control" placeholder="Ex: Informations, Rendez-vous, Réclamation...">
+              </div>
+
+              <div class="mb-4">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" rows="5" placeholder="Écrivez votre message ici..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg">
+                Envoyer
+              </button>
+
+              <div class="alert alert-info mt-4 mb-0">
+                <strong>Note :</strong> Ce formulaire est un prototype académique (les messages ne sont pas stockés).
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-5">
+        <div class="card shadow-sm mb-4">
+          <div class="card-body">
+            <h4 class="card-title mb-3">Coordonnées</h4>
+            <p class="mb-2"><strong>Adresse :</strong> Kinshasa, RDC</p>
+            <p class="mb-2"><strong>Téléphone :</strong> +243 XXX XXX XXX</p>
+            <p class="mb-2"><strong>Email :</strong> contact@hopital-kinshasa.cd</p>
+            <p class="mb-0"><strong>Urgences :</strong> 24h/24 – 7j/7</p>
+          </div>
+        </div>
+
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title mb-3">Localisation (offline)</h4>
+            <p class="mb-3">
+              Cette section représente la localisation de l’hôpital.
+              Une carte Google Maps peut être intégrée en ligne si Internet est disponible.
+            </p>
+            <div class="border rounded p-3 bg-light text-center">
+              <p class="mb-0 fw-bold">📍 Hôpital Général de Kinshasa</p>
+              <small class="text-muted">Kinshasa, République Démocratique du Congo</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-primary text-white text-center py-3">
+  <p class="mb-0">
+    © 2025 Hôpital Général de Kinshasa — Projet académique Web I
+  </p>
+</footer>
+
+<!-- Bootstrap JS LOCAL -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

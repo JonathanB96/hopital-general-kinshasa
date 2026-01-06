@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Actualités | Hôpital Général de Kinshasa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap LOCAL -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS personnel -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      Hôpital Général de Kinshasa
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="apropos.html">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="medecins.html">Médecins</a></li>
+        <li class="nav-item"><a class="nav-link" href="patients.html">Patients</a></li>
+        <li class="nav-item"><a class="nav-link" href="rendezvous.html">Rendez-vous</a></li>
+        <li class="nav-item"><a class="nav-link" href="horaires.html">Horaires</a></li>
+        <li class="nav-item"><a class="nav-link text-warning fw-bold" href="emergency.html">Urgences</a></li>
+        <li class="nav-item"><a class="nav-link active" href="actualites.html">Actualités</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= PAGE HEADER ================= -->
+<header class="bg-light py-4">
+  <div class="container text-center">
+    <h1 class="text-primary fw-bold">Actualités</h1>
+    <p class="lead">
+      Annonces, campagnes de santé et informations importantes
+    </p>
+  </div>
+</header>
+
+<!-- ================= NEWS LIST ================= -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- ACTU 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-primary mb-2">Annonce</span>
+            <h5 class="card-title">Campagne de sensibilisation</h5>
+            <p class="text-muted small">Publié le 10 Janvier 2026</p>
+            <p class="card-text">
+              L’hôpital organise une campagne de sensibilisation sur l’hygiène
+              et la prévention des maladies infectieuses.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACTU 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-success mb-2">Santé</span>
+            <h5 class="card-title">Consultations gratuites</h5>
+            <p class="text-muted small">Publié le 05 Janvier 2026</p>
+            <p class="card-text">
+              Des consultations gratuites en médecine générale sont organisées
+              durant une semaine.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACTU 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-warning text-dark mb-2">Service</span>
+            <h5 class="card-title">Mise à jour des horaires</h5>
+            <p class="text-muted small">Publié le 28 Décembre 2025</p>
+            <p class="card-text">
+              Les horaires de certains services ont été modifiés.
+              Veuillez consulter la page Horaires.
+            </p>
+            <a href="horaires.html" class="btn btn-outline-primary btn-sm mt-2">
+              Voir les horaires
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SECOND ROW -->
+    <div class="row g-4 mt-1">
+
+      <!-- ACTU 4 -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-danger mb-2">Urgence</span>
+            <h5 class="card-title">Informations urgentes</h5>
+            <p class="text-muted small">Publié le 20 Décembre 2025</p>
+            <p class="card-text">
+              En cas d’urgence médicale, veuillez vous rendre immédiatement
+              au service des urgences.
+            </p>
+            <a href="urgences.html" class="btn btn-danger btn-sm">
+              Accéder aux urgences
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACTU 5 -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-secondary mb-2">Information</span>
+            <h5 class="card-title">Prise de rendez-vous en ligne</h5>
+            <p class="text-muted small">Publié le 15 Décembre 2025</p>
+            <p class="card-text">
+              Les patients sont invités à utiliser la page Rendez-vous
+              pour mieux organiser les consultations.
+            </p>
+            <a href="rendezvous.html" class="btn btn-outline-primary btn-sm">
+              Prendre rendez-vous
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-primary text-white text-center py-3">
+  <p class="mb-0">
+    © 2025 Hôpital Général de Kinshasa — Projet académique Web I
+  </p>
+</footer>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

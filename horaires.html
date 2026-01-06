@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Horaires | Hôpital Général de Kinshasa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap LOCAL -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS personnel -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      Hôpital Général de Kinshasa
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="apropos.html">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="medecins.html">Médecins</a></li>
+        <li class="nav-item"><a class="nav-link" href="patients.html">Patients</a></li>
+        <li class="nav-item"><a class="nav-link" href="rendezvous.html">Rendez-vous</a></li>
+        <li class="nav-item"><a class="nav-link active" href="horaires.html">Horaires</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= PAGE HEADER ================= -->
+<header class="bg-light py-4">
+  <div class="container text-center">
+    <h1 class="text-primary fw-bold">Horaires de l’hôpital</h1>
+    <p class="lead">
+      Heures d’ouverture et disponibilité des services
+    </p>
+  </div>
+</header>
+
+<!-- ================= HORAIRES TABLE ================= -->
+<section class="py-5">
+  <div class="container">
+
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped text-center">
+        <thead class="table-primary">
+          <tr>
+            <th>Service</th>
+            <th>Lundi - Vendredi</th>
+            <th>Samedi</th>
+            <th>Dimanche</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Médecine Générale</td>
+            <td>08h00 - 17h00</td>
+            <td>08h00 - 13h00</td>
+            <td>Fermé</td>
+          </tr>
+          <tr>
+            <td>Pédiatrie</td>
+            <td>08h00 - 17h00</td>
+            <td>08h00 - 13h00</td>
+            <td>Fermé</td>
+          </tr>
+          <tr>
+            <td>Maternité / Gynécologie</td>
+            <td>08h00 - 17h00</td>
+            <td>08h00 - 13h00</td>
+            <td>Sur appel</td>
+          </tr>
+          <tr>
+            <td>Chirurgie</td>
+            <td>08h00 - 16h00</td>
+            <td>Sur rendez-vous</td>
+            <td>Fermé</td>
+          </tr>
+          <tr>
+            <td>Laboratoire</td>
+            <td>07h30 - 16h00</td>
+            <td>08h00 - 12h00</td>
+            <td>Fermé</td>
+          </tr>
+          <tr>
+            <td>Imagerie Médicale</td>
+            <td>08h00 - 16h00</td>
+            <td>Sur rendez-vous</td>
+            <td>Fermé</td>
+          </tr>
+          <tr>
+            <td>Urgences</td>
+            <td colspan="3" class="fw-bold text-danger">
+              Disponible 24h / 24 – 7j / 7
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Info box -->
+    <div class="alert alert-info mt-4">
+      <strong>Important :</strong> Les horaires peuvent varier selon les jours fériés
+      et les situations d’urgence.
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-primary text-white text-center py-3">
+  <p class="mb-0">
+    © 2025 Hôpital Général de Kinshasa — Projet académique Web I
+  </p>
+</footer>
+
+<!-- Bootstrap JS LOCAL -->
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
