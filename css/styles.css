@@ -1,0 +1,6 @@
+@media (max-width: 576px) {
+  /* smartphone styles here */
+  .header-menu {
+    padding-left: 10px;
+  }
+}
