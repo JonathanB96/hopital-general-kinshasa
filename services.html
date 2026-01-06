@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Services | Hôpital Général de Kinshasa</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Services | Hôpital Général de Kinshasa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap LOCAL -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- CSS personnel -->
-    <link rel="stylesheet" href="css/style.css">
+  <!-- CSS personnel -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -20,7 +19,10 @@
     <a class="navbar-brand fw-bold" href="index.html">
       Hôpital Général de Kinshasa
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -32,34 +34,37 @@
         <li class="nav-item"><a class="nav-link" href="medecins.html">Médecins</a></li>
         <li class="nav-item"><a class="nav-link" href="patients.html">Patients</a></li>
         <li class="nav-item"><a class="nav-link" href="rendezvous.html">Rendez-vous</a></li>
+        <li class="nav-item"><a class="nav-link" href="horaires.html">Horaires</a></li>
+        <li class="nav-item"><a class="nav-link text-warning fw-bold" href="urgences.html">Urgences</a></li>
+        <li class="nav-item"><a class="nav-link" href="actualites.html">Actualités</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- ================= PAGE HEADER ================= -->
+<!-- ================= HEADER ================= -->
 <header class="bg-light py-4">
   <div class="container text-center">
-    <h1 class="text-primary fw-bold">Nos Services Médicaux</h1>
+    <h1 class="text-primary fw-bold">Nos services médicaux</h1>
     <p class="lead">
-      Découvrez les principaux services disponibles à l’Hôpital Général de Kinshasa
+      Les principaux services offerts par l’Hôpital Général de Kinshasa
     </p>
   </div>
 </header>
 
-<!-- ================= SERVICES (CARDS) ================= -->
+<!-- ================= SERVICES ================= -->
 <section class="py-5">
   <div class="container">
     <div class="row g-4">
 
       <!-- Service 1 -->
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
+        <div class="card h-100 shadow-sm text-center">
           <div class="card-body">
             <h5 class="card-title">Médecine Générale</h5>
             <p class="card-text">
-              Consultations, diagnostic, suivi médical et orientation vers des spécialistes.
+              Consultations médicales, diagnostic, suivi et prévention des maladies.
             </p>
           </div>
         </div>
@@ -67,11 +72,11 @@
 
       <!-- Service 2 -->
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
+        <div class="card h-100 shadow-sm text-center">
           <div class="card-body">
             <h5 class="card-title">Pédiatrie</h5>
             <p class="card-text">
-              Prise en charge des enfants : consultations, vaccination et suivi de croissance.
+              Prise en charge des enfants, vaccinations et suivi de croissance.
             </p>
           </div>
         </div>
@@ -79,11 +84,11 @@
 
       <!-- Service 3 -->
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
+        <div class="card h-100 shadow-sm text-center">
           <div class="card-body">
             <h5 class="card-title">Maternité / Gynécologie</h5>
             <p class="card-text">
-              Suivi de grossesse, accouchement, consultations gynécologiques et planning familial.
+              Suivi de grossesse, accouchements et consultations gynécologiques.
             </p>
           </div>
         </div>
@@ -91,11 +96,11 @@
 
       <!-- Service 4 -->
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
+        <div class="card h-100 shadow-sm text-center">
           <div class="card-body">
             <h5 class="card-title">Chirurgie</h5>
             <p class="card-text">
-              Interventions chirurgicales, suivi post-opératoire et soins spécialisés.
+              Interventions chirurgicales et suivi post-opératoire.
             </p>
           </div>
         </div>
@@ -103,23 +108,26 @@
 
       <!-- Service 5 -->
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
+        <div class="card h-100 shadow-sm text-center border-danger">
           <div class="card-body">
-            <h5 class="card-title">Urgences</h5>
+            <h5 class="card-title text-danger">Urgences</h5>
             <p class="card-text">
-              Prise en charge rapide des cas graves et assistance 24h/24 en cas d’urgence.
+              Prise en charge immédiate des situations médicales critiques 24h/24.
             </p>
+            <a href="urgences.html" class="btn btn-danger btn-sm">
+              Accéder aux urgences
+            </a>
           </div>
         </div>
       </div>
 
       <!-- Service 6 -->
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
+        <div class="card h-100 shadow-sm text-center">
           <div class="card-body">
             <h5 class="card-title">Laboratoire</h5>
             <p class="card-text">
-              Analyses de sang, urine, tests rapides et soutien au diagnostic médical.
+              Analyses médicales pour aider au diagnostic et au suivi des patients.
             </p>
           </div>
         </div>
@@ -127,11 +135,11 @@
 
       <!-- Service 7 -->
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
+        <div class="card h-100 shadow-sm text-center">
           <div class="card-body">
             <h5 class="card-title">Imagerie Médicale</h5>
             <p class="card-text">
-              Radiographie, échographie et examens d’imagerie pour aider au diagnostic.
+              Radiographie et échographie pour des examens approfondis.
             </p>
           </div>
         </div>
@@ -139,7 +147,49 @@
 
       <!-- Service 8 -->
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
+        <div class="card h-100 shadow-sm text-center">
           <div class="card-body">
             <h5 class="card-title">Pharmacie</h5>
             <p class="card-text">
+              Délivrance des médicaments et conseils pharmaceutiques.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 9 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm text-center">
+          <div class="card-body">
+            <h5 class="card-title">Hospitalisation</h5>
+            <p class="card-text">
+              Accueil et suivi des patients nécessitant des soins prolongés.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-5">
+      <a href="rendezvous.html" class="btn btn-primary btn-lg">
+        Prendre un rendez-vous
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-primary text-white text-center py-3">
+  <p class="mb-0">
+    © 2025 Hôpital Général de Kinshasa — Projet académique Web I
+  </p>
+</footer>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
