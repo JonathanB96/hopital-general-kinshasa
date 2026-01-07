@@ -1,25 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>À propos | Hôpital Général de Kinshasa</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>À propos | Hôpital Général de Kinshasa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap LOCAL -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CDN (use one method only) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- CSS personnel -->
-    <link rel="stylesheet" href="css/styles.css">
+  <!-- CSS personnel -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Small page-specific animations (you can move to styles.css later) -->
+  <style>
+    /* Smooth fade-up animation */
+    .fade-up {
+      animation: fadeUp 0.8s ease both;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Image card hover animation */
+    .img-card {
+      overflow: hidden;
+      border-radius: 14px;
+    }
+    .img-card img {
+      transition: transform .45s ease;
+    }
+    .img-card:hover img {
+      transform: scale(1.06);
+    }
+
+    /* Carousel height control */
+    .hero-carousel img {
+      height: 420px;
+      object-fit: cover;
+    }
+
+    /* Mobile adjust */
+    @media (max-width: 576px) {
+      .hero-carousel img { height: 240px; }
+    }
+  </style>
 </head>
+
 <body>
 
 <!-- ================= NAVBAR ================= -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary header-menu">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">
-      Hôpital Général de Kinshasa
-    </a>
+    <a class="navbar-brand fw-bold" href="index.html">Hôpital Général de Kinshasa</a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,57 +66,133 @@
         <li class="nav-item"><a class="nav-link" href="medecins.html">Médecins</a></li>
         <li class="nav-item"><a class="nav-link" href="patients.html">Patients</a></li>
         <li class="nav-item"><a class="nav-link" href="rendezvous.html">Rendez-vous</a></li>
+        <li class="nav-item"><a class="nav-link" href="horaires.html">Horaires</a></li>
+        <li class="nav-item"><a class="nav-link text-warning fw-bold" href="urgences.html">Urgences</a></li>
+        <li class="nav-item"><a class="nav-link" href="actualites.html">Actualités</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- ================= PAGE HEADER ================= -->
+<!-- ================= HEADER ================= -->
 <header class="bg-light py-4">
-  <div class="container text-center">
+  <div class="container text-center fade-up">
     <h1 class="text-primary fw-bold">À propos de l’Hôpital Général de Kinshasa</h1>
-    <p class="lead">
-      Présentation, mission et vision de l’établissement
-    </p>
+    <p class="lead mb-0">Présentation, mission et vision de l’établissement</p>
   </div>
 </header>
 
-<!-- ================= HISTORIQUE ================= -->
-<section class="py-5">
-  <div class="container">
-    <h2 class="mb-3">Historique</h2>
-    <p>
-      L’Hôpital Général de Kinshasa est l’un des établissements de santé les plus importants
-      de la République Démocratique du Congo. Il a été créé pour offrir des soins médicaux
-      de qualité à la population de Kinshasa et des environs.
-    </p>
-    <p>
-      Grâce à son personnel qualifié et à ses infrastructures, l’hôpital joue un rôle
-      essentiel dans la prise en charge des patients et la formation du personnel médical.
-    </p>
+<!-- ================= SLIDESHOW / CAROUSEL ================= -->
+<section class="pb-4">
+  <div class="container fade-up">
+    <div id="aboutCarousel" class="carousel slide hero-carousel shadow-sm rounded" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="2"></button>
+      </div>
+
+      <div class="carousel-inner rounded">
+        <!-- Slide 1 -->
+        <div class="carousel-item active" data-bs-interval="3500">
+          <img src="images/about-1.jpg" class="d-block w-100" alt="Hôpital - vue extérieure">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="fw-bold">Un hôpital de référence</h5>
+            <p>Au service de la population de Kinshasa et des environs.</p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" data-bs-interval="3500">
+          <img src="images/about-2.jpg" class="d-block w-100" alt="Équipe médicale">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="fw-bold">Une équipe qualifiée</h5>
+            <p>Des professionnels engagés pour des soins de qualité.</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" data-bs-interval="3500">
+          <img src="images/about-3.jpg" class="d-block w-100" alt="Soins et accueil">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="fw-bold">Accueil & prise en charge</h5>
+            <p>Le patient au centre de nos décisions.</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Précédent</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Suivant</span>
+      </button>
+    </div>
   </div>
 </section>
 
-<!-- ================= MISSION & VISION ================= -->
-<section class="bg-light py-5">
+<!-- ================= HISTORIQUE + IMAGE ================= -->
+<section class="py-5">
   <div class="container">
-    <div class="row">
-
-      <div class="col-md-6">
-        <h3>Notre mission</h3>
+    <div class="row g-4 align-items-center">
+      <div class="col-md-6 fade-up">
+        <h2 class="mb-3">Historique</h2>
         <p>
-          Fournir des soins de santé accessibles, efficaces et humains, en mettant
-          le patient au centre de toutes les décisions médicales.
+          L’Hôpital Général de Kinshasa est l’un des établissements de santé les plus importants
+          de la République Démocratique du Congo. Il a été créé pour offrir des soins médicaux
+          de qualité à la population de Kinshasa et des environs.
+        </p>
+        <p class="mb-0">
+          Grâce à son personnel qualifié et à ses infrastructures, l’hôpital joue un rôle essentiel
+          dans la prise en charge des patients et la formation du personnel médical.
         </p>
       </div>
 
-      <div class="col-md-6">
-        <h3>Notre vision</h3>
-        <p>
-          Devenir un hôpital de référence nationale grâce à l’excellence médicale,
-          à l’innovation technologique et à une gestion moderne des services hospitaliers.
-        </p>
+      <div class="col-md-6 fade-up">
+        <div class="img-card shadow-sm">
+          <img src="images/about-history.jpg" class="img-fluid" alt="Historique de l’hôpital">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MISSION & VISION (with images) ================= -->
+<section class="bg-light py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-md-6 fade-up">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h3>Notre mission</h3>
+            <p>
+              Fournir des soins de santé accessibles, efficaces et humains, en mettant
+              le patient au centre de toutes les décisions médicales.
+            </p>
+            <div class="img-card mt-3">
+              <img src="images/mission.jpg" class="img-fluid" alt="Mission">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 fade-up">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h3>Notre vision</h3>
+            <p>
+              Devenir un hôpital de référence nationale grâce à l’excellence médicale,
+              à l’innovation technologique et à une gestion moderne des services hospitaliers.
+            </p>
+            <div class="img-card mt-3">
+              <img src="images/vision.jpg" class="img-fluid" alt="Vision">
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -91,9 +201,9 @@
 
 <!-- ================= OBJECTIFS ================= -->
 <section class="py-5">
-  <div class="container">
+  <div class="container fade-up">
     <h2 class="mb-3">Nos objectifs</h2>
-    <ul class="list-group list-group-flush">
+    <ul class="list-group list-group-flush shadow-sm rounded">
       <li class="list-group-item">Améliorer la qualité des soins médicaux</li>
       <li class="list-group-item">Optimiser la gestion des patients et des rendez-vous</li>
       <li class="list-group-item">Réduire le temps d’attente des patients</li>
@@ -104,13 +214,10 @@
 
 <!-- ================= FOOTER ================= -->
 <footer class="bg-primary text-white text-center py-3">
-  <p class="mb-0">
-    © 2025 Hôpital Général de Kinshasa — Projet académique Web I
-  </p>
+  <p class="mb-0">© 2025 Hôpital Général de Kinshasa — Projet académique Web I</p>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Bootstrap JS LOCAL -->
-<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 
+<!-- Bootstrap JS CDN (use one method only) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
