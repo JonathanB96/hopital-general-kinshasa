@@ -1,28 +1,87 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Hôpital Général de | Accueil</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Hôpital Général de Kinshasa | Accueil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap LOCAL -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CDN (KEEP ONLY THIS) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- CSS personnel -->
+  <link rel="stylesheet" href="css/styles.css">
 
-    <!-- CSS personnel -->
-    <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* =========================
+       On-load + On-scroll animations
+       ========================= */
+
+    /* Base state */
+    .animate {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      will-change: opacity, transform;
+    }
+
+    /* Visible state */
+    .animate.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Variants */
+    .fade-left { transform: translateX(-28px); }
+    .fade-right { transform: translateX(28px); }
+
+    .scale-up { transform: scale(0.94); }
+    .scale-up.show { transform: scale(1); }
+
+    /* Respect reduced-motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+      .animate, .btn-anim, .img-hover {
+        transition: none !important;
+        animation: none !important;
+      }
+      .animate { opacity: 1 !important; transform: none !important; }
+    }
+
+    /* =========================
+       (1) Button hover animation
+       ========================= */
+    .btn-anim {
+      transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+    }
+    .btn-anim:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.12);
+      filter: brightness(1.02);
+    }
+    .btn-anim:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+
+    /* Optional: subtle image hover for cards */
+    .img-hover {
+      transition: transform .35s ease;
+    }
+    .img-hover:hover {
+      transform: scale(1.03);
+    }
+  </style>
 </head>
+
 <body>
 
 <!-- ================= NAVBAR ================= -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary header-menu header-menu">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary header-menu">
   <div class="container">
     <a class="navbar-brand fw-bold" href="index.html">Hôpital Général de Kinshasa</a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
 
     <div class="collapse navbar-collapse" id="menu">
       <ul class="navbar-nav ms-auto">
@@ -32,6 +91,9 @@
         <li class="nav-item"><a class="nav-link" href="medecins.html">Médecins</a></li>
         <li class="nav-item"><a class="nav-link" href="patients.html">Patients</a></li>
         <li class="nav-item"><a class="nav-link" href="rendezvous.html">Rendez-vous</a></li>
+        <li class="nav-item"><a class="nav-link" href="horaires.html">Horaires</a></li>
+        <li class="nav-item"><a class="nav-link text-warning fw-bold" href="urgences.html">Urgences</a></li>
+        <li class="nav-item"><a class="nav-link" href="actualites.html">Actualités</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -41,32 +103,36 @@
 <!-- ================= HERO SECTION ================= -->
 <header class="bg-light py-5">
   <div class="container text-center">
-    <h1 class="text-primary fw-bold">Bienvenue à l’Hôpital Général de Kinshasa</h1>
+
+    <h1 class="text-primary fw-bold animate show">
+      Bienvenue à l’Hôpital Général de Kinshasa
+    </h1>
+
     <img src="images/image1.jpg"
-     class="img-fluid rounded shadow mt-4"
-     alt="Hôpital Général de Kinshasa">
-    <p class="lead mt-3">
+         class="img-fluid rounded shadow mt-4 animate scale-up show"
+         alt="Hôpital Général de Kinshasa">
+
+    <p class="lead mt-3 animate show">
       Un système moderne pour la gestion des patients, des rendez-vous et des services médicaux.
     </p>
-    <a href="rendezvous.html" class="btn btn-primary btn-lg mt-3">
+
+    <a href="rendezvous.html" class="btn btn-primary btn-lg mt-3 btn-anim animate show">
       Prendre un rendez-vous
     </a>
-    <div class="mt-3">
-  <div class="mt-3">
-  <a href="horaires.html" class="btn btn-outline-primary me-2">
-    Horaires
-  </a>
 
-  <a href="urgences.html" class="btn btn-outline-danger me-2">
-    Urgences
-  </a>
+    <div class="mt-3 animate show">
+      <a href="horaires.html" class="btn btn-outline-primary me-2 btn-anim">
+        Horaires
+      </a>
 
-  <a href="actualites.html" class="btn btn-outline-secondary">
-    Actualités
-  </a>
-</div>
+      <a href="urgences.html" class="btn btn-outline-danger me-2 btn-anim">
+        Urgences
+      </a>
 
-</div>
+      <a href="actualites.html" class="btn btn-outline-secondary btn-anim">
+        Actualités
+      </a>
+    </div>
 
   </div>
 </header>
@@ -74,12 +140,13 @@
 <!-- ================= SERVICES OVERVIEW ================= -->
 <section class="py-5">
   <div class="container">
-    <h2 class="text-center mb-4">Nos Services</h2>
+    <h2 class="text-center mb-4 animate">Nos Services</h2>
+
     <div class="row">
 
-      <div class="col-md-4">
+      <div class="col-md-4 animate fade-left">
         <div class="card text-center shadow-sm">
-          <img src="images/image3.jpg" class="card-img-top" alt="Médecine générale">  
+          <img src="images/image3.jpg" class="card-img-top img-hover" alt="Médecine générale">
           <div class="card-body">
             <h5 class="card-title">Médecine Générale</h5>
             <p class="card-text">Consultations médicales et suivi des patients.</p>
@@ -87,9 +154,9 @@
         </div>
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-4 animate">
         <div class="card text-center shadow-sm">
-            <img src="images/image4.jpg" class="card-img-top" alt="Médecine générale">
+          <img src="images/image4.jpg" class="card-img-top img-hover" alt="Urgences">
           <div class="card-body">
             <h5 class="card-title">Urgences</h5>
             <p class="card-text">Service d’urgence disponible 24h/24.</p>
@@ -97,9 +164,9 @@
         </div>
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-4 animate fade-right">
         <div class="card text-center shadow-sm">
-          <img src="images/image5.jpg" class="card-img-top" alt="Médecine générale">
+          <img src="images/image5.jpg" class="card-img-top img-hover" alt="Laboratoire">
           <div class="card-body">
             <h5 class="card-title">Laboratoire</h5>
             <p class="card-text">Analyses médicales rapides et fiables.</p>
@@ -113,14 +180,12 @@
 
 <!-- ================= ABOUT PREVIEW ================= -->
 <section class="bg-light py-5">
-  <div class="container text-center ">
-    
+  <div class="container text-center animate">
     <h2>Pourquoi choisir notre hôpital ?</h2>
     <p class="mt-3">
-      L’Hôpital Général de Kishasa met la technologie au service de la santé
+      L’Hôpital Général de Kinshasa met la technologie au service de la santé
       pour assurer une meilleure prise en charge des patients.
     </p>
-    
   </div>
 </section>
 
@@ -131,11 +196,35 @@
   </p>
 </footer>
 
-<!-- Bootstrap JS LOCAL -->
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+  // =========================
+  // (2) On-scroll animation + STAGGER (delay)
+  // =========================
 
+  const animatedEls = document.querySelectorAll(".animate");
+
+  // Add stagger delay automatically (0ms, 120ms, 240ms...)
+  animatedEls.forEach((el, i) => {
+    // Keep immediate "show" elements (hero) instant
+    if (!el.classList.contains("show")) {
+      el.style.transitionDelay = `${(i % 8) * 120}ms`;
+    }
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target); // animate once
+      }
+    });
+  }, { threshold: 0.15 });
+
+  animatedEls.forEach((el) => observer.observe(el));
+</script>
 
 </body>
 </html>
